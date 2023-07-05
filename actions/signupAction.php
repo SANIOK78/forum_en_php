@@ -1,7 +1,5 @@
-<!-- Dans ce fichier on va gérer les données recupérées -->
+<!-- SYSTEME d'Inscription -->
 <?php 
-    session_start(); //ouverture du session utilisateur
-
     // 1. Connexion a la BD.
     require('actions/connectDB.php');
 
@@ -56,4 +54,4 @@
         }
     }
 ?>
-<!-- On   -->
+

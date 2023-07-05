@@ -1,5 +1,5 @@
 <?php 
-    require('actions/signupAction.php');
+    require('actions/loginAction.php');
 ?>
 
 <!DOCTYPE html>
@@ -11,32 +11,25 @@
     <body>
         <div class="container my-5">
 
-            <?php if(isset($userInfos)) {echo "<p>Bienvenue <b>".$userInfos['pseudo']."</b></p> "; } ?> 
-
             <form action='#'method="POST" class='shadow-sm rounded p-4 bg_white' >
-                <h1 class='text-center text-info'>Inscription</h1>
+                <h1 class='text-center text-info'>Connexion</h1>
+
                 <div class="mb-3">
                     <label for="pseudo" class="form-label">Pseudo</label>
                     <input type="text" class="form-control" name="pseudo" id="pseudo" />
                 </div>
-                <div class="mb-3">
-                    <label for="lastname" class="form-label">Nom</label>
-                    <input type="text" class="form-control" id="lastname" name="lastname" />
-                </div>
-                <div class="mb-3">
-                    <label for="firstname" class="form-label">Prénom</label>
-                    <input type="text" class="form-control" id="firstname" name='firstname' />
-                </div>
+               
                 <div class="mb-3">
                     <label for="password" class="form-label">Password</label>
-                    <input type="password" class="form-control" name="password" id="password" />
+                    <input type="password" class="form-control" name="password" id="password"/>
                 </div>
+
                 <button type="submit" class="btn btn-success btnPerso" name='validate'>
-                    S'inscrire
+                    Se connecter
                 </button>
 
-                <p class='my-3'>
-                    J'ai déjà un compte, <a href="login.php"> je me connecte.</a>
+                <p class="my-3">
+                    Je n'ai pas de compte, <a href="signup.php"> je m'inscris </a>.
                 </p>
 
                 <?php if(isset($errorMsg)) {echo "<p class='erreur'>".$errorMsg."</p> "; } ?> 
