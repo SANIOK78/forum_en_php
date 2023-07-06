@@ -2,8 +2,7 @@
 
     // Configuration de la connexion a la BD
     try {
-        // Ouverture d'une session
-        session_start();
+        
 
         $bdd = new PDO('mysql:host=localhost;dbname=forum;charset=utf8', 'root', 'root');
     

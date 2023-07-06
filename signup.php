@@ -1,11 +1,11 @@
 <?php 
-    require('actions/signupAction.php');
+    require('actions/users/signupAction.php');
 ?>
 
 <!DOCTYPE html>
     <html lang="fr">
 
-    <?php include 'commons/head.php' ?>
+    <?php include 'commons/head.php'; ?>
 
 
     <body>
@@ -45,7 +45,7 @@
         </div>
 
 
-       <?php include ('commons/footer.php') ?>
+       <?php include 'commons/footer.php'; ?>
 
     </body>
 </html>

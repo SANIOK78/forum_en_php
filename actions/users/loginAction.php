@@ -1,5 +1,8 @@
 <!-- SYSTEME DE CONNEXION  -->
 <?php 
+    // Ouverture d'une session
+    session_start();
+    
     //1. Importation connexion a la bD
     require('actions/connectDB.php');
 

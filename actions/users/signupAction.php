@@ -1,5 +1,8 @@
 <!-- SYSTEME d'Inscription -->
 <?php 
+    // Ouverture d'une session
+    session_start();
+    
     // 1. Connexion a la BD.
     require('actions/connectDB.php');
 

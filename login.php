@@ -1,11 +1,11 @@
 <?php 
-    require('actions/loginAction.php');
+    require('actions/users/loginAction.php');
 ?>
 
 <!DOCTYPE html>
     <html lang="fr">
 
-    <?php include 'commons/head.php' ?>
+    <?php include 'commons/head.php'; ?>
 
 
     <body>
@@ -38,7 +38,7 @@
         </div>
 
 
-       <?php include ('commons/footer.php') ?>
+       <?php include 'commons/footer.php'; ?>
 
     </body>
 </html>

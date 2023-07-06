@@ -1,14 +1,19 @@
 <?php 
-    require('actions/securityAction.php');
+    session_start();
+    require('actions/users/securityAction.php');
+    
 ?>
 
 <!DOCTYPE html>
     <html lang="fr">
 
-    <?php include 'commons/head.php' ?>
+    <?php include 'commons/head.php' ; ?>
 
 
     <body>
+        <!-- NAVIGATION -->
+        <?php include 'commons/navbar.php' ; ?>
+
         <div class="container my-5">
 
            <?php 
@@ -23,12 +28,12 @@
                 Page Accueil
             </h1>
 
-            <a href="actions/logoutAction.php">
+            <a href="actions/users/logoutAction.php">
                 Deconnexion
             </a>
         </div>
 
 
-        <?php include ('commons/footer.php') ?>
+        <?php include 'commons/footer.php' ; ?>
     </body>
 </html>
