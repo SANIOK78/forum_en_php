@@ -4,14 +4,14 @@
 -->
 <?php
     // Ouverture de la session
-    session_start();
+    // session_start();
 
     // importation de la connexion DB
     require('actions/connectDB.php');
 
     // Requête pour récupérer tous les questions
     $getAllMyQuestions = $bdd -> prepare('SELECT id, titre, description, contenu FROM questions
-                                    WHERE id_auteur= ?
+                                    WHERE id_auteur = ?
                                     ORDER BY id DESC   
                                 ');
     // Execution requête (identifaiant de l'utilisateur connecté)                          

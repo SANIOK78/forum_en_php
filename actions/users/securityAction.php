@@ -1,5 +1,5 @@
 <?php 
-    // session_start();
+    session_start();
 
     // Vérification si l'utilisateur est authentifié
     // Si la variable globale "$_SESSION['auth'] n'est 

@@ -21,7 +21,7 @@
             $question_author_id = $_SESSION['id']; //ID de l'auteur de la publication
             $question_author_pseudo = $_SESSION['pseudo']; //pseudo de l'auteur 
 
-            // Insertion du contenu/questions dans la BD
+            // Insertion du contenu/questions dans la BD( sur le site)
             $insertQuestionOnDB = $bdd -> prepare('INSERT INTO questions(titre, description, contenu, id_auteur, pseudo_auteur, date_publication)
                                                 VALUE (?, ?, ?, ?, ?, ?)
                                             ');
@@ -32,10 +32,10 @@
                     $question_description, 
                     $question_contenu, 
                     $question_author_id, 
+                    $question_author_pseudo,
                     $question_Date, 
-                    $question_author_pseudo)
-                );
-
+                )
+            );
             // Message succes
             $successMsg = "Question enregistré avec succes !!!";
 

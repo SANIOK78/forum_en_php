@@ -1,8 +1,8 @@
 <?php 
     // On va inclure la sécurité pour ne pas permettre l'acces 
     // au site si pas authentifié
-    require('actions/questions/publishAction.php');
     require('actions/users/securityAction.php');
+    require('actions/questions/publishAction.php');
     
 ?>
 
@@ -40,7 +40,7 @@
                     if(isset($errorMsg)) {
                         echo "<p class='text-danger my-2'>".$errorMsg."</p> "; 
 
-                    } else if($successMsg) {
+                    } else if(isset($successMsg)) {
                         echo "<p class='text-success my-2'>".$successMsg."</p> ";
                     }
                 ?> 

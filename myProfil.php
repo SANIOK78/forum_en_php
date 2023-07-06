@@ -1,7 +1,7 @@
 <?php 
-    require('actions/questions/myQuestionsActions.php');
     // Securité =>redirecton user non authentifié sur "login" 
     require('actions/users/securityAction.php') ;
+    require('actions/questions/myQuestionsActions.php');
 ?>
 
 <!DOCTYPE html>
@@ -11,16 +11,12 @@
     <body>
         <?php include 'commons/navbar.php'; ?>
         <div class="container my-3">
-            <h1 class='text-primary text-center my-2'>
-                Mon Profil
-            </h1>
-
-            <h4 class="my-2">Mes questions :</h4>
+            <h1 class='text-primary text-center my-2'>Mes questions :</h1>
 
             <!-- Affichage des questions recupéré dapuis BD -->
             <?php 
-                // Pour chaque question, on recup chaque données
-                while( $question = $getAllMyQuestions->fetch() ) {  ?>
+                // Pour chaque question, on recupère chaque données
+                while( $question = $getAllMyQuestions -> fetch() ) {  ?>
                     <!-- on va creer un "card bootstrap" -->
                     <div class="card my-3">
                         <h5 class="card-header">
@@ -35,18 +31,18 @@
                             <p class="card-text">
                                 <?php echo $question['contenu']; ?>
                             </p>
-                            <a href="#" class="btn btn-success">Acceder à l'article</a>
-                            <a href="#" class="btn btn-warning">Modifier à l'article</a>
+                            <a href="#" class="btn btn-success">Acceder à la question</a>
+
+                            <!-- On envoit dans les param URL l'id de la question a modifier -->
+                            <a href="edit-question.php?id=<?= $question['id']; ?>" class="btn btn-warning">
+                                Modifier la question
+                            </a>
                         </div>
                     </div>
                 
-
                 <?php }                            
             ?>
-        </div>
-
-       
-        
+        </div>       
         <?php include 'commons/footer.php'; ?>
     </body>
 </html>
