@@ -1,6 +1,6 @@
 <!--SYSTEME Publication Question -->
 <?php 
-    session_start();
+    // session_start();
 
     // 1. Importation de la BD
     require('actions/connectDB.php');
