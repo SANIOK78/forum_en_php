@@ -25,9 +25,9 @@
         if($checkIfQuestionExiste -> rowCount() > 0) {  
 
             //Récuperation de tous les données de la requête 
-            $usersInfos = $checkIfQuestionExiste -> fetch();
+            $questionInfos = $checkIfQuestionExiste -> fetch();
             // Vérif si user qui veut supprimer la question est l'auteur
-            if($usersInfos['id_auteur'] == $_SESSION['id'] ) {
+            if($questionInfos['id_auteur'] == $_SESSION['id'] ) {
 
                 //Requête pour supprimer la question : Suprimer depuis la table "questions"
                 // la publication qui possede "id" rentré par user (depuis URL)

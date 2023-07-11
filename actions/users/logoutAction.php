@@ -9,4 +9,4 @@
     session_destroy();
 
     // Rédirection page "login"
-    header('Location: ../../login.php');
+    header('Location: ../../index.php');

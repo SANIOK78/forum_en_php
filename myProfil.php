@@ -18,15 +18,19 @@
                 while( $question = $getAllMyQuestions -> fetch() ) {  ?>
                     <!-- on va creer un "card bootstrap" -->
                     <div class="card my-3">
-                        <h5 class="card-header"><?php echo $question['titre']; ?></h5>
-                            
+
+                        <h2 class='card-header'><?= $question['titre'] ?></h2>
+                                                       
                         <div class="card-body">
                             <p class="card-text">  <?php echo $question['description']; ?> </p>                           
                             <hr />
                             <p class="card-text">
                                 <?php echo $question['contenu']; ?>
                             </p>
-                            <a href="#" class="btn btn-success">Acceder à la question</a>
+
+                            <a href="article.php?id=<?php echo $question['id'] ?>" class="btn btn-success">
+                                Acceder à la question
+                            </a>
 
                             <!-- On envoit dans les param URL l'id de la question a modifier -->
                             <a href="edit-question.php?id=<?= $question['id']; ?>" class="btn btn-warning">

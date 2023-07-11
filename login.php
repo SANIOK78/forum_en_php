@@ -32,7 +32,7 @@
                     Je n'ai pas de compte, <a href="signup.php"> je m'inscris </a>.
                 </p>
 
-                <?php if(isset($errorMsg)) {echo "<p class='erreur'>".$errorMsg."</p> "; } ?> 
+                <?php if(isset($errorMsg)) {echo "<p class='text-danger'>".$errorMsg."</p> "; } ?> 
                               
             </form>
         </div>
