@@ -8,6 +8,9 @@
 .bg_white{
     background-color: #fff;
 }
+.card-shadow{
+    box-shadow: 0 0 6px rgba(123, 7, 233, 0.5)!important;
+}
 /* .erreur{
     margin-top: 10px;
     color: red;

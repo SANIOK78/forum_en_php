@@ -11,8 +11,8 @@
     <body>
         <div class="container my-5">
 
-            <form action='#'method="POST" class='shadow-sm rounded p-4 bg_white' >
-                <h1 class='text-center text-info'>Connexion</h1>
+            <form action='#' method="POST" class='shadow rounded p-4 bg_white' >
+                <h1 class='text-center text-info mb-4'>Connexion</h1>
 
                 <div class="mb-3">
                     <label for="pseudo" class="form-label">Pseudo</label>

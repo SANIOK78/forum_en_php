@@ -3,7 +3,7 @@
     <div class="container-fluid ">
         <?php if(isset($_SESSION['auth']) && isset( $_SESSION['pseudo'])) { ?>
             
-            <a class="navbar-brand fs-2" href="index.php"><?php echo $_SESSION['pseudo'] ?></a>
+            <a class="navbar-brand fs-2" href="index.php">@<?php echo $_SESSION['pseudo'] ?></a>
 
         <?php } else { ?>
             <a class="navbar-brand fs-2" href="index.php">@Forum </a>
@@ -37,6 +37,11 @@
 
               <!-- Afficher le bouton "deconnexion" seulement si le user est connecté -->
                 <?php if(isset($_SESSION['auth'])) { ?>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link fs-5" href="profilUser.php?id=<?= $_SESSION['id']; ?> ">
+                            <u>Mon Profil</u>
+                        </a>
+                    </li>   
 
                     <li class="nav-item mx-2">
                         <a class="btn btn-outline-dark fs-6" href="actions/users/logoutAction.php">

@@ -29,8 +29,12 @@
                     <hr>
 
                     <div class="d-flex justify-content-between">
-                        <strong><?php echo $question_pseudoAuteur; ?></strong>
+
+                        <a href="profilUser.php?id=<?= $question_auteurID ?>" >
+                            <?php echo $question_pseudoAuteur; ?>
+                        </a>
                         <p><?php echo $question_datePublication; ?></p>
+
                     </div>                
                 </div>
              <!-- Espace COMMENTAIRES -->
@@ -56,16 +60,19 @@
                         while($reponse = $getAllResponsesOfOneQustion -> fetch()) { ?>
 
                             <div class="card my-3">
+
                                 <div class="card-header">
-                                    <?php echo $reponse['pseudo_auteur'] ?>
+                                    <a href="profilUser.php?id=<?= $reponse['id_auteur']; ?>">
+
+                                        <?php echo $reponse['pseudo_auteur'] ?>
+                                    </a>
                                 </div>
                                 <div class="card-body">
                                     <?php echo $reponse['contenu'] ?>
                                 </div>
                             </div>
 
-                    <?php } ?>
-                    
+                    <?php } ?>                   
                 </div>
             <?php }  ?>                      
         </div>        

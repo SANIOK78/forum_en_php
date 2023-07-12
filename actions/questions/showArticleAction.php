@@ -30,7 +30,6 @@
             $question_pseudoAuteur = $questionInfos['pseudo_auteur'];
             $question_datePublication = $questionInfos['date_publication'];
 
-
         } else {  //pas de question récupéré
             $errorMsg = "<p class='text-danger'>Pas de question trouvé</p>";
         }

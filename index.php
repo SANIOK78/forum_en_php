@@ -42,10 +42,8 @@
                         <div class="card-header">
 
                             <a href="article.php?id=<?php echo $question['id'] ?> ">
-
                                 <?php echo "<h2>".$question['titre']."</h2>"; ?>
                             </a>
-
                         </div>
 
                         <div class="card-body">
@@ -55,8 +53,11 @@
 
                         <div class="card-footer">
                             <p>
-                            Publié par <?php echo "<strong>".$question['pseudo_auteur']."</strong>"; ?>
-                            le <?php echo "<strong>".$question['date_publication']."</strong>"; ?>
+                                Publié par 
+                                <a href="profilUser.php?id=<?= $question['id_auteur'] ?> ; ">
+                                    <?php echo "<strong>".$question['pseudo_auteur']."</strong>"; ?>
+                                </a>
+                                le <?php echo "<strong>".$question['date_publication']."</strong>"; ?>
                             </p>
                         </div>
                     </div>

@@ -17,7 +17,7 @@
                 // Pour chaque question, on recupère chaque données
                 while( $question = $getAllMyQuestions -> fetch() ) {  ?>
                     <!-- on va creer un "card bootstrap" -->
-                    <div class="card my-3">
+                    <div class="card my-4 border border-primary card-shadow">
 
                         <h2 class='card-header'><?= $question['titre'] ?></h2>
                                                        
