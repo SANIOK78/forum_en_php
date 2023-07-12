@@ -30,8 +30,8 @@
                     </a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link fs-5" href="myProfil.php">
-                        <u>myProfil</u>
+                    <a class="nav-link fs-5" href="mesQuestions.php">
+                        <u>Mes questions</u>
                     </a>
                 </li>
 
